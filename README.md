@@ -18,8 +18,7 @@ Here's steps:
 
 1. Build project from source or download release file.
 2. Copy `keycloak-social-plurk-VERSION.jar` to `KEYCLOAK_HOME/standalone/deployments`.
-3. Get `scribejava-core-6.5.1.jar` from [here](http://central.maven.org/maven2/com/github/scribejava/scribejava-core/6.5.1/scribejava-core-6.5.1.jar).
-4. Install module into keycloak:
+3. Get `scribejava-core-6.5.1.jar` from [here](http://central.maven.org/maven2/com/github/scribejava/scribejava-core/6.5.1/scribejava-core-6.5.1.jar). Then install as module into keycloak:
   * Either manually:
 ```
 mkdir -p modules/system/layers/keycloak/com/github/scribejava/core/main
@@ -41,5 +40,5 @@ Then add file `modules/system/layers/keycloak/com/github/scribejava/core/main/mo
 ```
 KEYCLOAK_HOME/bin/jboss-cli.sh --command="module add --name=com.github.scribejava.core --resources=PATH_TO_THE_JAR --dependencies=javax.api"
 ```
-5. Copy files from `resources/keycloak/theme/base/admin/resources/partials` to `${keycloak.home.dir}/themes/base/admin/resources/partials`
+4. Copy files from `resources/keycloak/theme/base/admin/resources/partials` to `${keycloak.home.dir}/themes/base/admin/resources/partials`
 
